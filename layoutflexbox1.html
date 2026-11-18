@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout Flexbox 1</title>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Times New Roman", serif;
+  font-size: 16px;
+}
+
+/* Wadah utama: Nav di kiri, .main di kanan */
+.container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+nav {
+  width: 150px;
+  background-color: pink;
+  padding: 10px 15px;
+}
+
+/* Kolom kanan: header, content, footer ditumpuk vertikal */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+footer {
+  background-color: khaki;
+  padding: 10px 15px;
+  height: 60px;
+}
+
+/* Baris tengah: Article + Aside berdampingan */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+article {
+  flex: 1;
+  background-color: white;
+  padding: 10px 15px;
+}
+
+aside {
+  width: 170px;
+  background-color: cyan;
+  padding: 10px 15px;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 600px) {
+  .container,
+  .content {
+    flex-direction: column;
+  }
+
+  nav,
+  aside {
+    width: 100%;
+  }
+}
+  </style>
+    
+</head>
+<body>
+  <div class="container">
+    <nav>Nav</nav>
+
+    <div class="main">
+      <header>Header</header>
+
+      <div class="content">
+        <article>Article</article>
+        <aside>Aside</aside>
+      </div>
+
+      <footer>Footer</footer>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout Header Article Aside Nav Footer</title>
+  <style>
+    * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Times New Roman", serif;
+  font-size: 16px;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 700px;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+
+header,
+footer {
+  background: #f0e68c;
+  padding: 18px 14px;
+}
+
+.main {
+  display: flex;
+  height: 160px;
+}
+
+article {
+  flex: 1;
+  background: #ffffff;
+  padding: 14px;
+}
+
+aside {
+  width: 22%;
+  background: #ffc0cb;
+  padding: 14px;
+}
+
+nav {
+  width: 22%;
+  background: #00d9c0;
+  padding: 14px;
+}
+
+/* Perubahan kecil dari contoh */
+header {
+  border-bottom: 2px solid #d8cc70;
+}
+
+footer {
+  border-top: 2px solid #d8cc70;
+  text-align: center;
+}
+  </style>
+  
+</head>
+<body>
+  <div class="container">
+    <header>Header</header>
+
+    <div class="main">
+      <article>Article</article>
+      <aside>Aside</aside>
+      <nav>Nav</nav>
+    </div>
+
+    <footer>Footer</footer>
+  </div>
+</body>
+</html>

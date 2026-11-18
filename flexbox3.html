@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeri Foto Flexbox</title>
+  <style>
+    * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.galeri {
+  width: 90%;
+  max-width: 460px;
+}
+
+/* Setiap baris memakai flexbox */
+.baris {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.foto {
+  flex: 1;
+  height: 40px;
+  background: #e2e4e8;
+  border: 2px solid #555;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: #444;
+}
+
+/* Perubahan kecil dari contoh */
+.baris:nth-child(2) .foto {
+  background: #d6e4ea;
+}
+  </style>
+</head>
+<body>
+  <div class="galeri">
+
+    <div class="baris">
+      <div class="foto">Foto 1</div>
+      <div class="foto">Foto 2</div>
+      <div class="foto">Foto 3</div>
+    </div>
+
+    <div class="baris">
+      <div class="foto">Foto 4</div>
+      <div class="foto">Foto 5</div>
+      <div class="foto">Foto 6</div>
+      <div class="foto">Foto 7</div>
+      <div class="foto">Foto 8</div>
+    </div>
+
+  </div>
+</body>
+</html>
